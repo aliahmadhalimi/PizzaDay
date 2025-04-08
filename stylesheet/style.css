@@ -1,0 +1,573 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+}
+
+/* :root{
+    main-color: 0b262f , rgb(11, 37, 46) ;
+    sMain-color: 85cc5d, rgb(133, 204, 93);
+
+} */
+
+button:hover, #footerSection1 .inputContainer span:hover{
+    opacity: 0.7;
+}
+
+/* _______________  Start of the project _______________*/
+
+.container{
+    /* position: relative; */
+    height: 100vh;
+    max-width: 100%;
+    background-image: url(../images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 1s ease;
+}
+
+.navbarActive{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 111;
+    width: 80%;
+    /* margin: auto; */
+    background-color: #0b262fb7;
+    box-shadow: -0px 10px 10px rgba(255, 255, 255, 0.1);
+    /* box-shadow: 0 0 10px #85cc5d; */
+    transition: 1s ease;
+}
+
+.navbar .logo{
+    font-size: 35px;
+    color: white;
+    font-weight: 900;
+}
+
+.navbar .logo span{
+    color: #85cc5d;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    padding: 0 25px;
+}
+
+.navbar ul li a{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+    position: relative;
+}
+.navbar ul li a:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbar ul li .default{
+    color: rgba(255, 255, 255, 1);
+}
+.navbar ul li .default::after{
+    content: '';
+    position: absolute;
+    top: 115%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #85cc5d;
+}
+
+.navbar ul li a::after{
+    content: '';
+    position: absolute;
+    top: 115%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #85cc5d;
+    transition: 0.5s ease;
+}
+
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+
+.humburger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.humburger .humLine{
+    height: 2px;
+    /* width: 30px; */
+    width: 40px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.5s ease;
+}
+
+.humburger:hover .lh{
+    width: 30px;
+}
+
+/* Hero section */
+
+.containerSmall{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    height: 500px;
+    width: 500px;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.containerSmall h2{
+    font-size: 2.7rem;
+    color: white;
+}
+
+.containerSmall h2 span{
+    color: #85cc5d;
+}
+
+.containerSmall p{
+    color: white;
+    font-size: 1rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.containerSmall .hero_footer{
+    display: flex;
+    gap: 30px;
+}
+.containerSmall button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #85cc5d;
+    color: #0b262f;
+    border-radius: 10px;
+}
+
+.containerSmall .play{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+/* End Hero section */
+
+/* Start of the section 1 */
+
+.section1{
+    /* height: 50vh; */
+    width: 100%;
+    background-color: #0b262f;
+}
+
+.section1 h2{
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.dishesCardContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dishesCard{
+    position: relative;
+    height: 200px;
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(255, 255, 0, 0.1); */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    display: flex;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+
+.dishesCard:hover{
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.dishesCard .dishesCardImg {
+    height: 100%;
+    width: 150px;
+    /* background: #000; */
+    display: grid;
+    place-items: center;
+}
+.dishesCard .dishesCardImg img{
+        width: 100%;
+}
+
+.dishesCardContent{
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.dishesCardContent h3{
+    font-size: 40px;
+}
+
+.dishesCardContent span{
+    display: inline-block;
+    padding: 15px 0;
+    color: white;
+}
+
+.dishesCardContent span svg:hover{
+    color: orange;
+}
+
+.dishesCardContent .prize{
+    font-weight: 900;
+    font-size: 1.5vw;
+}
+
+.dishesCardContent .cardCart{
+    height: 50px;
+    width: 50px;
+    background-color: #85cc5d;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.dishesCardContent .cardCart svg{
+    font-size: 40px;
+    color: #0b262f;
+}
+
+
+/* End of the section 1 */
+
+/* Start of the section 2 */
+
+.section2{
+    /* height: 100vh; */
+    width: 100%;
+    background: #0b262f;
+    padding: 200px 180px;
+    display: grid;
+    place-items: center;
+}
+
+.section2Content{
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+    width: 100%;
+    gap: 100px;
+    overflow: hidden;
+}
+
+.section2Content .left, .right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.section2Content .right{
+    padding-left: 15px;
+}
+
+
+.right h3{
+    font-size: 40px;
+    color: white;
+}
+
+.right p{
+    color: white;
+    font-size: 27px;
+    padding: 15px 0;
+}
+
+.right button{
+    padding: 10px 15px;
+    font-size: 30px;
+    border-radius: 10px;
+    color: #0b262f;
+    background-color: #85cc5d;
+
+}
+
+
+
+/* End of the section 2 */
+
+
+/* Start of the section 3 */
+
+
+.section3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0b262f;
+    /* height: 100vh; */
+    padding-bottom: 150px;
+    
+}
+
+.section3 .card{
+    position: relative;
+    height: 450px;
+    width: 350px;
+    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.section3 .card_top{
+    height: 300px;
+    /* background-color: orange; */
+    width: 100%;
+    background-image: url('../images/pattern1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    place-items: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    position: relative;
+
+}
+
+.section3 .card_top img{
+    height: 85%;
+    width: 85%;
+    position: absolute;
+     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.section3 .card .card_content{
+    color: white;
+    padding: 5px 0;
+}
+.section3 .card .card_content span{
+    padding: 20px 0;
+    color: white;
+    display: inline-block;
+}
+
+.section3 .card .card_content span p{
+    font-weight: 900;
+    padding-top: 5px;
+    font-size: 27px;
+}
+
+
+.section3 .card .card_content .cardCart{
+    height: 50px;
+    width: 50px;
+    background-color: #85cc5d;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.section3 .card .card_content .cardCart svg{
+    font-size: 30px;
+    color: #0b262f;
+}
+
+
+
+
+/* End of the section 3 */
+
+
+/* Start of the section 4 */
+
+
+.section4{
+    /* height: 100vh; */
+    width: 100%;
+    background-color: #0b262f;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.section4_cards{
+    /* height: 800px; */
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.section4_cards .card_header{
+    height: 70%;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.section4_cards .card_header img{
+    width: 100%;
+}
+
+.card_body{
+    padding: 20px;
+}
+
+.card_body h2{
+    color: white;
+    padding: 10px 0;
+}
+
+.card_body p{
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.card_body .footer{
+    color: #85cc5d;
+    padding: 10px 0;
+}
+
+
+
+
+
+
+/* end of the section 4 */
+
+
+
+
+
+
+
+
+
+/* +++++++++++ Footer section +++++++++++ */
+
+footer{
+    background-color: #162832;
+    padding: 20px 250px;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+footer .logo{
+    font-size: 40px;
+    color: white;
+    font-weight: 900;
+}
+
+footer .logo span{
+    color: #85cc5d;
+}
+
+.footerSection ul h2{
+    color: white;
+}
+
+.footerSection ul li{
+    padding: 5px 0;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.footerSection ul li:hover{
+    color: #85cc5d;
+}
+
+#footerSection1 p{
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+#footerSection1 .inputContainer{
+    /* background-color: red; */
+    border: 1px solid #85cc5d;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#footerSection1 .inputContainer input{
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 25px;
+}
+#footerSection1 .inputContainer input::placeholder{
+    color: white;
+}
+
+#footerSection1 .inputContainer span{
+    background-color: #85cc5d;
+    display: inline-block;
+    padding: 10px;
+    font-size: 25px;
+    color: #162832;
+}
+
+
+
+
+
+
+
+
+
+/* _______________  end of the project  _______________*/

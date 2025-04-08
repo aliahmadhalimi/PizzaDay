@@ -1,0 +1,214 @@
+@media screen and (max-width: 1350px){
+    /* .navbar{
+        background-color: red;
+    }    */
+
+    .humburger .humLine{
+        width: 2.5vw;
+    }
+
+    .containerSmall{
+        top: 32%;
+        left: 10%;
+    }
+
+    .dishesCardContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .dishesCard{
+        width: 500px;
+    }
+
+    .dishesCardContent{
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+
+    .dishesCardContent h3, .dishesCardContent .prize{
+        font-size: 20px;
+    }
+
+    .section2{
+        padding: 100px 10px;
+    }
+
+    .section3{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section3 .card{
+        width: 450px;
+    }
+
+    footer{
+        padding: 20px 100px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+/*     
+    .navbar{
+        background-color: orange;
+    } */
+
+    .container{
+        background-image: url('../images/hero1.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .humburger .humLine{
+        width: 40px;
+        /* margin: px 0; */
+    }
+
+    .containerSmall{
+        left: 5%;
+        width: 400px;
+    }
+
+    .section2{
+        padding: 100px 10px;
+    }
+
+    .section2Content{
+        gap: 50px;
+    }
+
+
+
+    .section2Content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .section2Content .left, .right{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section4{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section4_cards{
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    footer{
+        padding: 20px 20px;
+    }
+    
+
+}
+
+
+@media screen and (max-width: 850px){
+    
+    .navbar .logo{
+        font-size: 18px;
+    }
+
+    .containerSmall{
+        display: none;
+    }
+
+    .navbar{
+        padding: 10px 20px;
+        /* background-color: red; */
+    }
+
+    .navbar ul li{
+        padding: 0 20px;
+    }
+
+    .dishesCardContent .cardCart svg{
+        font-size: 30px;
+        
+    }
+
+
+}
+
+
+@media screen and (max-width: 650px) {
+
+    
+    .navbar ul li a{
+        display: none;
+    }
+
+    .containerSmall{
+        display: none;
+    }
+
+    .dishesCardContainer{
+        padding: 20px;
+    }
+
+    .dishesCard{
+        width: 100%;
+    }
+
+    .dishesCardContent .cardCart svg{
+        font-size: 25px;
+    }
+
+    
+    .section2Content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .section2Content .left, .right{
+        width: 90%;
+    }
+
+
+    .section3{
+        padding: 20px;
+    }
+
+    .section3 .card{
+        width: 100%;
+    }
+
+    
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .footerSection{
+        width: 85%;
+    }
+
+    footer #footerSection1 .inputContainer{
+        display: none;
+    }
+
+
+    footer #footerSection1, #footerSection2, #footerSection3{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    
+}
